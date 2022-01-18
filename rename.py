@@ -5,7 +5,7 @@ def re_fileName(path):
     num=1
     for file in fileList:
         used_fileName,extension = os.path.splitext(file)
-        new_file = '轨迹捕获0'+str(num+8)+extension;#加一个零的文件num要加8
+        new_file = '轨迹捕获0'+str(num+8)+extension;#加一个零的文件num要加8，两个零的要加减1
         os.rename(file, new_file)
         print("文件%s重命名成功，新的文件名为：%s" %(path+file, path+new_file))
         num += 1
